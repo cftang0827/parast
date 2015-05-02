@@ -27,6 +27,8 @@ void keyPressEvent(QKeyEvent* e);
 /////////////////////////////////////////////////////
 int flag = rand();
 long double imag_index ;
+
+
 int imag_number = 10;
 string imag_name;
 QString text01;
@@ -40,6 +42,7 @@ int right_answer = 0;
 int wrong_answer = 0;
 QString qoverall = "0";
 QString qright = "0";
+QString qwrong = "0";
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -104,7 +107,7 @@ void MainWindow::on_pushButton_clicked()
     overall_num = overall_num +1;
     string overall = to_string(overall_num);
     qoverall = QString::fromStdString(overall);
-    ui->label_3->setText("correct/overall try: "+qright+"/"+qoverall);
+    ui->label_3->setText("correct/overall try/wrong: "+qright+"/"+qoverall+"/"+qwrong);
 
 
 }
@@ -123,13 +126,18 @@ void MainWindow::on_pushButton_2_clicked()
         right_answer = right_answer + 1;
         string right = to_string(right_answer);
         qright = QString::fromStdString(right);
-        ui->label_3->setText("correct/overall: "+qright+"/"+qoverall);
+        ui->label_3->setText("correct/overall try: "+qright+"/"+qoverall);
 
         ui->pushButton->click();
 
     }else if (current_text!=rand_fileread())
     {
         ui->label_ans->setText("Please try again! QQ");
+        wrong_answer = wrong_answer + 1;
+        string wrong = to_string(wrong_answer);
+        qwrong = QString::fromStdString(wrong);
+        ui->label_3->setText("correct/overall try/wrong: "+qright+"/"+qoverall+"/"+qwrong);
+
     }
 }
 
@@ -179,7 +187,7 @@ void MainWindow::on_pushButton_3_clicked()
 
 void MainWindow::on_pushButton_4_clicked()
 {
-    ui->lcdNumber->display(100* (double) right_answer/(double) overall_num);
+    ui->lcdNumber->display(100* ((double) right_answer - (double)wrong_answer)/(double) overall_num);
 }
 
 
@@ -198,6 +206,9 @@ void MainWindow::keyPressEvent(QKeyEvent * e)
     }else if(e->key() == Qt::Key_Escape)
     {
         ui->pushButton_3->click();
+    }else if(e->key() == Qt::Key_Delete)
+    {
+        ui->pushButton_5->click();
     }
 }
 
@@ -230,3 +241,12 @@ void MainWindow::keyPressEvent(QKeyEvent * e)
 
 //}
 
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    overall_num = 0;
+    right_answer = 0;
+    wrong_answer = 0;
+    ui->label_3->setText("correct/overall try/wrong: 0/0/0");
+
+}
