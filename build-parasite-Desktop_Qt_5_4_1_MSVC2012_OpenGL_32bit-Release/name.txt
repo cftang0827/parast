@@ -1,0 +1,10 @@
+1  Ascaris lumbricoides
+2  Enterobius vamicularis
+3  Trichuris trichiura
+4  Fasciola hepatica
+5  Taenia solium
+6  Blastocystis hominis
+7  Clonorchis sinensis
+8  Schistosoma japonicum
+9  Paragonimus westermani
+10 Hymenolepis nana

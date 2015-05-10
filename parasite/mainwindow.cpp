@@ -15,6 +15,7 @@
 #include <QKeySequence>
 
 
+
 using namespace cv;
 using namespace std;
 #define SIZE 100
