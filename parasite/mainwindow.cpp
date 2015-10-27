@@ -1,18 +1,21 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "opencv2/highgui/highgui.hpp"
-#include "opencv2/core/core.hpp"
+//#include "opencv2/highgui/highgui.hpp"
+//#include "opencv2/core/core.hpp"
 #include "stdlib.h"
 #include "iostream"
-#include "opencv2/imgproc/imgproc.hpp"
-#include "opencv2/imgproc/imgproc_c.h"
+//#include "opencv2/imgproc/imgproc.hpp"
+//#include "opencv2/imgproc/imgproc_c.h"
 #include <fstream>
 #include <string>
 #include <cstdlib>
-#include "opencv2/core/core.hpp"
+//#include "opencv2/core/core.hpp"
 #include <time.h>
 #include <QKeyEvent>
 #include <QKeySequence>
+#include "opencv2/core/core.hpp"
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
 
 
 
@@ -153,7 +156,7 @@ string rand_fileread()
         cout<<"file open fail"<<endl;
     else
         cout<<"OK"<<endl;
-    std::cout<<"fin"<<fin<<std::endl;
+//    std::cout<<"fin"<<fin<<std::endl;
 
     std::cout<<"line2"<<line2<<std::endl;
     std::cout<<"imag_index"<<imag_index<<std::endl;

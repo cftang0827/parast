@@ -34,22 +34,27 @@ QT += widgets
 ####
 ####-------------------------------------------------
 
-INCLUDEPATH += D:\opencv\build\include\
+####-------------------------------------------------
+####
+#### OpenCV lib include
+####
+####-------------------------------------------------
+
+INCLUDEPATH += I:\opencv\build\include\
 
 
 CONFIG(release,debug|release){
-    LIBS += D:\opencv\build\x86\vc10\lib\opencv_calib3d246.lib \
-            D:\opencv\build\x86\vc10\lib\opencv_contrib246.lib \
-            D:\opencv\build\x86\vc10\lib\opencv_core246.lib \
-            D:\opencv\build\x86\vc10\lib\opencv_features2d246.lib \
-            D:\opencv\build\x86\vc10\lib\opencv_flann246.lib \
-            D:\opencv\build\x86\vc10\lib\opencv_gpu246.lib \
-            D:\opencv\build\x86\vc10\lib\opencv_highgui246.lib \
-            D:\opencv\build\x86\vc10\lib\opencv_imgproc246.lib \
-            D:\opencv\build\x86\vc10\lib\opencv_legacy246.lib \
-            D:\opencv\build\x86\vc10\lib\opencv_ml246.lib \
-            D:\opencv\build\x86\vc10\lib\opencv_objdetect246.lib \
-            D:\opencv\build\x86\vc10\lib\opencv_ts246.lib \
-            D:\opencv\build\x86\vc10\lib\opencv_video246.lib \
+    LIBS += I:\opencv\build\x64\vc12\lib\opencv_calib3d249.lib \
+            I:\opencv\build\x64\vc12\lib\opencv_contrib249.lib \
+            I:\opencv\build\x64\vc12\lib\opencv_core249.lib \
+            I:\opencv\build\x64\vc12\lib\opencv_features2d249.lib \
+            I:\opencv\build\x64\vc12\lib\opencv_flann249.lib \
+            I:\opencv\build\x64\vc12\lib\opencv_gpu249.lib \
+            I:\opencv\build\x64\vc12\lib\opencv_highgui249.lib \
+            I:\opencv\build\x64\vc12\lib\opencv_imgproc249.lib \
+            I:\opencv\build\x64\vc12\lib\opencv_legacy249.lib \
+            I:\opencv\build\x64\vc12\lib\opencv_ml249.lib \
+            I:\opencv\build\x64\vc12\lib\opencv_objdetect249.lib \
+            I:\opencv\build\x64\vc12\lib\opencv_ts249.lib \
+            I:\opencv\build\x64\vc12\lib\opencv_video249.lib \
 }
-
